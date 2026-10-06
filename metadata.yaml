@@ -1,0 +1,5 @@
+name: astrbot_plugin_reply_guard
+display_name: 引用回复 AI 拦截
+desc: 按自定义消息格式屏蔽引用机器人消息触发的默认 AI 回复，支持正则规则。
+version: v1.2.0
+author: 千雪琉音

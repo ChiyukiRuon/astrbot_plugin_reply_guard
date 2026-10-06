@@ -1,0 +1,38 @@
+{
+  "enabled": {
+    "description": "启用引用拦截",
+    "type": "bool",
+    "default": true
+  },
+  "format_patterns": {
+    "description": "屏蔽的消息格式（正则，每项一条）",
+    "type": "list",
+    "items": {
+      "type": "string"
+    },
+    "default": [],
+    "hint": "完全自定义，任意一条匹配就屏蔽；默认空列表不屏蔽。原消息转成文本：图片变成[图片]，语音变成[语音]，其他文字保持原样。规则与示例见 README。"
+  },
+  "apply_group": {
+    "description": "应用于群聊",
+    "type": "bool",
+    "default": true
+  },
+  "apply_private": {
+    "description": "应用于私聊",
+    "type": "bool",
+    "default": true
+  },
+  "fetch_missing_reply": {
+    "description": "补查不完整的引用消息",
+    "type": "bool",
+    "default": true,
+    "hint": "仅 OneBot v11 支持。最多等待 5 秒；补查失败或无法确认发送者时不拦截。"
+  },
+  "stop_event": {
+    "description": "同时停止其他插件处理",
+    "type": "bool",
+    "default": false,
+    "hint": "默认仅关闭 AstrBot 自动 AI 回复，保留插件指令。开启后终止后续事件传播。"
+  }
+}
